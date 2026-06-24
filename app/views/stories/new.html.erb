@@ -1,0 +1,23 @@
+<h1>Buat Cerita</h1>
+<div class="max-w-md mx-auto mt-10 p-8 bg-white rounded-3xl shadow-xl border-4 border-yellow-400">
+  <h1 class="text-3xl font-black text-center text-indigo-600 mb-6">🎨 DongengKu AI</h1>
+  
+  <%= form_with model: @story, class: "space-y-4" do |f| %>
+    <div>
+      <%= f.label :character, "Siapa tokoh utamanya?", class: "block font-bold text-gray-700" %>
+      <%= f.text_field :character, placeholder: "Misal: Kucing Astronot", class: "w-full rounded-full border-gray-300 shadow-sm focus:ring-indigo-500" %>
+    </div>
+
+    <div>
+      <%= f.label :setting, "Di mana kejadiannya?", class: "block font-bold text-gray-700" %>
+      <%= f.text_field :setting, placeholder: "Misal: Hutan Permen", class: "w-full rounded-full border-gray-300 shadow-sm focus:ring-indigo-500" %>
+    </div>
+
+    <div>
+      <%= f.label :moral_lesson, "Apa pesan moralnya?", class: "block font-bold text-gray-700" %>
+      <%= f.text_field :moral_lesson, placeholder: "Misal: Suka menabung", class: "w-full rounded-full border-gray-300 shadow-sm focus:ring-indigo-500" %>
+    </div>
+
+    <%= f.submit "Buat Cerita Ajaib! ✨", class: "w-full py-3 bg-indigo-600 text-white font-bold rounded-full hover:bg-indigo-700 cursor-pointer transition shadow-lg" %>
+  <% end %>
+</div>

@@ -1,0 +1,24 @@
+<h1>Dongengmu</h1>
+<div class="max-w-2xl mx-auto mt-10 p-8 bg-amber-50 rounded-lg shadow-inner min-h-[400px] relative">
+  
+  <%= turbo_stream_from @story %>
+
+  <div class="flex justify-between items-center mb-6">
+    <%= link_to "← Buat Lagi", new_story_path, class: "text-indigo-600 font-bold" %>
+    <span class="px-4 py-1 bg-yellow-200 text-yellow-800 rounded-full text-sm font-bold">Mode Membaca 📖</span>
+  </div>
+
+  <div id="story_display" class="prose prose-indigo lg:prose-xl mx-auto">
+    <div id="story_content_<%= @story.id %>" class="text-gray-800 leading-relaxed first-letter:text-5xl first-letter:font-bold first-letter:mr-3 first-letter:float-left">
+      <%= @story.content %>
+    </div>
+    
+    <div id="loading_spinner" class="mt-4 hidden only:block">
+      <div class="animate-pulse flex space-x-2">
+        <div class="h-2 w-2 bg-indigo-400 rounded-full"></div>
+        <div class="h-2 w-2 bg-indigo-400 rounded-full"></div>
+        <div class="h-2 w-2 bg-indigo-400 rounded-full"></div>
+      </div>
+    </div>
+  </div>
+</div>

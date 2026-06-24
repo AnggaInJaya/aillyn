@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  character: MyString
+  setting: MyString
+  moral_lesson: MyString
+  title: MyString
+  content: MyText
+  status: MyString
+
+two:
+  user_id: 1
+  character: MyString
+  setting: MyString
+  moral_lesson: MyString
+  title: MyString
+  content: MyText
+  status: MyString
